@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BMI Calculator</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h1>BMI Calculator</h1>
 
-    <!-- Height input -->
-    <div class="input-group">
-      <label for="height">Height</label>
-      <div class="height-row">
-        <input type="number" id="height" placeholder="Enter your height" />
-        <select id="heightUnit">
-          <option value="cm">cm</option>
-          <option value="ft">feet</option>
-        </select>
-      </div>
+    <label for="age">Enter your Age:</label>
+    <input type="number" id="age" placeholder="e.g. 25">
+
+    <label for="height">Enter your Height:</label>
+    <div class="row">
+      <input type="number" id="height" placeholder="e.g. 170">
+      <select id="heightUnit">
+        <option value="cm">cm</option>
+        <option value="ft">ft</option>
+      </select>
     </div>
 
-    <!-- Weight input (each on new line) -->
-    <div class="input-group">
-      <label for="weight">Weight (kg)</label><br />
-      <input type="number" id="weight" placeholder="Enter your weight" />
+    <label for="weight">Enter your Weight:</label>
+    <div class="row">
+      <input type="number" id="weight" placeholder="e.g. 60">
+      <select id="weightUnit">
+        <option value="kg">kg</option>
+        <option value="lbs">lbs</option>
+      </select>
     </div>
 
     <button id="calculateBtn">Calculate BMI</button>
+    <button id="resetBtn" class="reset">Reset</button>
 
-    <div class="result">
-      <p id="bmiValue"></p>
-      <p id="bmiMessage"></p>
-    </div>
+    <div id="result"></div>
+    <p id="tip"></p>
   </div>
 
   <script src="script.js"></script>
